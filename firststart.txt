@@ -10,3 +10,5 @@
 
 
   kubectl label node node2 node-role.kubernetes.io/worker=
+
+kubectl describe pods hello
