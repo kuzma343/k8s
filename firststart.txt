@@ -12,3 +12,13 @@
   kubectl label node node2 node-role.kubernetes.io/worker=
 
 kubectl describe pods hello
+
+
+kubectl exec -it hello sh
+
+
+7788 server   80 klaster-user
+kubectl port-forward hello 7788:80
+
+
+kubectl apply -f firstpod.yaml
