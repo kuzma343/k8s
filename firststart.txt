@@ -31,9 +31,13 @@ kubectl scale deployment denis-deployment  --replicas 4
 
 kubectl autoscale deployment denis-deployment --min=4 --max=6 --cpu-percent=80
 kubectl get hpa
-
+kubectl get rs
 змінити версію
 kubectl set image deployment/denis-deployment k8sphp=adv4000/k8sphp:version1 --record
 
 вернути версію
 kubectl rollout undo deployment/denis-deployment
+
+
+to kill 
+kubectl delete -f deployment.yaml
