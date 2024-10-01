@@ -22,3 +22,12 @@ kubectl port-forward hello 7788:80
 
 
 kubectl apply -f firstpod.yaml
+
+
+kubectl create deployment denis-deployment --image adv4000/k8sphp:latest
+
+
+kubectl scale deployment denis-deployment  --replicas 4
+
+kubectl autoscale deployment denis-deployment --min=4 --max=6 --cpu-percent=80
+kubectl get hpa
